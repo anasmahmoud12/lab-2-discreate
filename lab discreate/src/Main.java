@@ -10,7 +10,7 @@ public Pair(int a,int b){
 }
 }
 public  class Main  {
-
+// grjahsfdhklfjkdslajfkldsjaklfjkdsljfklsdjaklfjkldsja
 boolean isPrime(int n){
     if(n==1||n%2==0||n%3==0){
         return  false;
