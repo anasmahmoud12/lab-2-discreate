@@ -114,8 +114,15 @@ public static void main(String[] args) {
 
 Main obj=new Main();
     Scanner input=new Scanner(System.in);
-System.out.println("give me the number to get prime factors ");
+System.out.println("give me the number to check prime and  get prime factors ");
 int n=input.nextInt();
+
+if(obj.isPrime(n)){
+    System.out.println("number is prime ");
+}
+else{
+    System.out.println("number not prime");
+}
 
 List<Integer>primeton=obj.primesToN(n);
 
@@ -123,22 +130,23 @@ List<Integer>primeton=obj.primesToN(n);
 //    System.out.println(primeton.get(i));
 //}
     List<Integer> factors=obj.factorization(n,new ArrayList<>(),primeton,0);
-
-//for(int i=0;i<factors.size();++i){
-//    System.out.println(factors.get(i));
-//}
+System.out.println("factors is ");
+for(int i=0;i<factors.size();++i){
+    System.out.printf("%d ", factors.get(i));
+}
+System.out.println();
 
     List<Pair> factors2=obj.factorization2(n,new ArrayList<>(),primeton,0);
-
-//for(int i=0;i<factors2.size();++i){
-//    System.out.printf("%d^%d\n", factors2.get(i).first,  factors2.get(i).second);
-////    System.out.println(factors2.get(i).second);
-//}
-
-    for(int i=0;i<factors2.size();++i){
-        System.out.printf("%d^%d\n", factors2.get(i).first,  factors2.get(i).second);
+System.out.println("factors in another way");
+for(int i=0;i<factors2.size();++i){
+    System.out.printf("%d^%d\n", factors2.get(i).first,  factors2.get(i).second);
 //    System.out.println(factors2.get(i).second);
-    }
+}
+
+//    for(int i=0;i<factors2.size();++i){
+//        System.out.printf("%d^%d\n", factors2.get(i).first,  factors2.get(i).second);
+////    System.out.println(factors2.get(i).second);
+//    }
 
 
     }
